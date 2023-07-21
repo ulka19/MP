@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Мэри Поппинс</title>
+  <link rel="stylesheet" href="эх5.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Mary Poppins</span>
+    </div>
+    <div id="about">
+      <a href="#" title="О нас" onclick="slowScroll('#main')">О нас</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Акции">Акции</a>
+	  <a href="#" onclick="slowScroll('#loc')" title="Местоположение">Местоположение</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Обратная связь">Обратная связь</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Мэрри Поппинс</h1>
+    <h3>сеть парков аттракционов для всей семьи</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Окунитесь в детство с головой!</h2>
+      <span>Большой выбор аттракционов для всей семьи</span>
+    </div>
+    <div class="text">
+      <span>Развлечения без границ ждут вас круглый год в крытом парке! Совершите головокружительные полеты на аттракционах, познакомьтесь со знаменитыми мультперсонажами, попробуйте блюда в атмосферных ресторанах. Положительые эмоции начинаются здесь!</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Акции</h2>
+    <h4>мы любим своих клиентов</h4>
+
+    <div class="img">
+      <img src="https://i.pinimg.com/236x/10/29/fc/1029fcc7952e576bc9937a702913d776.jpg" alt="">
+      <span>Скидка 50% по средам по студенческому билету</span>
+    </div>
+    <div class="img">
+	<img src="https://paint4me.ru/images/akvagrim20.jpg" alt="">
+      <span>10% скидка на аквагрим по будням!</span>
+      
+    </div>
+<div class="img">
+      <img src="https://static.tildacdn.com/tild6538-6463-4632-a134-306234373430/7B2KZJBZsdY_5.jpg" alt="">
+      <span>Катайся со скидкой 20% в день рождения</span>
+    </div>
+<div class="img">
+      <img src="https://nanya.ru/upload/medialibrary/513/513bd1f7058b45455a1bf360c5b3ead0.jpg" alt="">
+      <span>Дети до 5 лет-бесплатно!</span>
+    </div>
+  </div>
+    <div id="loc">
+    <center><h5>Мы находимся здесь!</h5></center>
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A476c4282e495a245b3ff7470282a912b9adf2b337765ecd1e01c9ebd0be201c2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+	<h4>Адрес: Липецкая область, с. Доброе, ул. Ленина, д.155</h4>
+	</div>
+
+  <div id="contacts">
+    <center><h5>Мы ценим ваше мнение!</h5></center>
+<center><h6>Расскажите о ваших впечатлениях!</h6></center>
+    <form id="form_input" method="post" action="test.php">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите сообщение" name="massege" id="message"></textarea><br>
+			<p>
+<input id="mess_send" class="btn" type="submit" name="send" value="Отправить">  
+</p>
+    </form>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+ 
+  </script>
+ 
+ <script>
+if ('serviceWorker' in navigator) {
+ window.addEventListener('load', function() {  
+   navigator.serviceWorker.register('/sw.js').then(
+     function(registration) {
+       // Registration was successful
+       console.log('ServiceWorker registration successful with scope: ', registration.scope); },
+     function(err) {
+       // registration failed :(
+       console.log('ServiceWorker registration failed: ', err);
+     });
+ });
+}
+</script>
+ 
+</body>
+</html>
